@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "build:compiler": "google-closure-compiler --entry_point=./src/index.js --js=./src/**/*.js --js=./node_modules/**/*.js --js_output_file=./dist/index.html --module_resolution=NODE --compilation_level=ADVANCED --warning_level=VERBOSE",
+    "build:compiler": "google-closure-compiler --entry_point=./src/index.js --js=./src/**/*.js --js=./node_modules/three/**/*.js --js=./node_modules/es6-tween/**/*.js --js_output_file=./dist/index.html --module_resolution=NODE --compilation_level=ADVANCED",
     "start": "webpack-dev-server --open",
     "start:dist": "http-server ./dist/",
     "test": "echo \"Error: no test specified\" && exit 1",

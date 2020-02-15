@@ -1,3 +1,6 @@
+/**
+ * @fileoverview Entry point for the app.
+ */
 import {
   BoxGeometry,
   Mesh,
@@ -33,3 +36,5 @@ const animate = () => {
 };
 
 animate();
+
+export {};
