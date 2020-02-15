@@ -4,12 +4,11 @@
   "description": "Example Three.js project compiled using Closure Compiler",
   "main": "index.js",
   "scripts": {
-    "compiler": "google-closure-compiler --js=./src/index.js --js_output_file=./dist/index.html",
-    "copy": "cp ./src/index.html ./dist/index.html",
-    "dir": "mkdir -p ./dist",
-    "build": "npm run dir && npm run copy && npm run compiler",
-    "start": "npm run build && http-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server --open",
+    "start:dist": "http-server ./dist/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch"
   },
   "keywords": [
     "Three.js",
@@ -20,9 +19,15 @@
   "author": "kmturley",
   "license": "ISC",
   "dependencies": {
-    "@tweenjs/tween.js": "^18.5.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "closure-webpack-plugin": "^2.2.1",
+    "copy-webpack-plugin": "^5.1.1",
+    "es6-tween": "^5.5.10",
     "google-closure-compiler": "^20200204.0.0",
     "http-server": "^0.12.1",
-    "three": "^0.113.2"
+    "three": "^0.113.2",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }
