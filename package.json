@@ -1,0 +1,28 @@
+{
+  "name": "closure-compiler-threejs",
+  "version": "1.0.0",
+  "description": "Example Three.js project compiled using Closure Compiler",
+  "main": "index.js",
+  "scripts": {
+    "compiler": "google-closure-compiler --js=./src/index.js --js_output_file=./dist/index.html",
+    "copy": "cp ./src/index.html ./dist/index.html",
+    "dir": "mkdir -p ./dist",
+    "build": "npm run dir && npm run copy && npm run compiler",
+    "start": "npm run build && http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Three.js",
+    "Tween.js",
+    "Closure",
+    "Compiler"
+  ],
+  "author": "kmturley",
+  "license": "ISC",
+  "dependencies": {
+    "@tweenjs/tween.js": "^18.5.0",
+    "google-closure-compiler": "^20200204.0.0",
+    "http-server": "^0.12.1",
+    "three": "^0.113.2"
+  }
+}
