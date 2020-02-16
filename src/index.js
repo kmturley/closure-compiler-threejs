@@ -8,8 +8,8 @@ import {
   PerspectiveCamera,
   Scene,
   WebGLRenderer
-} from 'three';
-import { Easing, Tween, update } from 'es6-tween';
+} from 'three/src/Three';
+import { Easing, Tween, update } from 'es6-tween/src/index';
 
 const scene = new Scene();
 const camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
